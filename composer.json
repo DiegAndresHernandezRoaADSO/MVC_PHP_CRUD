@@ -1,0 +1,14 @@
+{
+    "name": "sena/mvc_darly_2696521",
+    "authors": [
+        {
+            "name": "Darly Hernandez",
+            "email": "darlyhernadez0624@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "sena\\": "app/"
+        }
+    }
+}
