@@ -13,6 +13,9 @@ class MainController extends Controller
 
     public function index () 
     {
-        $this -> view('home','app');
+        $data = [
+            'title' => 'Portada del proyecto',
+        ];
+        $this -> view('home', $data,'app');
     }
 }

@@ -8,13 +8,13 @@ class User extends model
 {
     protected $table = "users";
 
-    public function __construct()
-    {
-        parent::___construct();
+    public function __construct(){
+        parent::__construct();
 
     }
 
-    public function getUsers(){
-        return $this-> sele($this->table);
+    public function getUsers()
+    {
+        return $this->select($this->table);
     }
 }

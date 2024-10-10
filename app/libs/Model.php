@@ -1,9 +1,8 @@
 <?php
 
-namespace Sena\libs;
+namespace sena\libs;
 
 class Model {
-
     protected $db;
     protected $connection;
 
@@ -27,5 +26,12 @@ class Model {
         $stm = $this-> connection ->prepare ("SELECT * FROM $table");
         $stm->execute();
         return $this->fecthAll();
+    }
+
+    public function getByd($table = "", $id)
+    {
+        $this = $this->connection -> prepare ("SELECT * FROM $table WHERE id= :id");
+        
+
     }
 }

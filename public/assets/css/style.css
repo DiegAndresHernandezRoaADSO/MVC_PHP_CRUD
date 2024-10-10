@@ -1,4 +1,22 @@
 body {
-    background-color: pink;
+    background-color: rgb(216, 53, 24);
     color: black;
+
+}
+.container{
+    max-width: 1200px;
+    margin:  0 auto;
+
+}
+
+.table{
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr) 80px;
+    grid-template-rows: max-content;
+    gap: 4px;   
+}
+
+.table div{
+    border:  1px solid;
+    padding: 6px;
 }

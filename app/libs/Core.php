@@ -1,16 +1,16 @@
 <?php
 
 namespace sena\libs;
-
-class core{
+class Core{
     protected $controller = 'MainController';
     protected $method = 'index';
     protected $parameters = [];
 
-    public function __construct(){
+    public function __construct()
+    {
         $url = $this ->getUrl();
-        if($url != "" && file_exists('../app/controllers/'.ucwords($url[0].'controller.php'))){
-          $this -> controller= ucwords($url[0].'controller');
+        if($url != "" && file_exists('../app/controllers/'.ucwords($url[0].'Controller.php'))){
+          $this -> controller= ucwords($url[0].'Controller');
           unset($url[0]);
         }
         $obj = $this ->controller;
@@ -42,6 +42,10 @@ class core{
             $url = explode('/', $url);
 
         }
+        echo "<pre>";
+        print_r($url);
+        echo"</pre>";
+        die();
         return $url;
     }
 }

@@ -2,9 +2,27 @@
 
 namespace sena\libs;
 
-class Controller {
+class Controller 
+{
 
-    public function view($view, $layout) 
+    /**
+    *Metodo para cargarun modelo desde la carpeta model
+    *
+    *este metodo se utilizara para cargar los modelos de form dinamico, solo tiene que mencionar el modelo
+    *
+    *@param string 
+    *@acces public
+    *@return object Instancia del modelo
+    */
+
+    public function model($model)
+    {
+        //construye el nombre del modelo
+        $model = "Sena\model\\" .$model;
+        return new $model;
+    }
+
+    public function view($view, $data =[] ,$layout) 
     {
         ob_start();
         $view = $view . '.view';
